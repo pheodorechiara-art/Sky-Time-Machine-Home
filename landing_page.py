@@ -7,8 +7,11 @@ st.set_page_config(page_title="Sky Time Machine", layout="wide", initial_sidebar
 st.markdown(
     """
     <style>
-      header, footer, #MainMenu {visibility: hidden;}
+      header, footer, #MainMenu, [data-testid="stToolbar"], [data-testid="stDecoration"] {display: none !important;}
+      .stApp, [data-testid="stAppViewContainer"] {background: #04050c !important;}
       .block-container {padding: 0 !important; max-width: 100% !important;}
+      [data-testid="stVerticalBlock"] {gap: 0 !important;}
+      iframe {height: 100vh !important; display: block; border: 0;}
     </style>
     """,
     unsafe_allow_html=True,
